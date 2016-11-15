@@ -33,8 +33,3 @@ Then we print a string:
 --- Print a string
 say "hello, you " ~ Acme::Insult::Lala.new.generate-insult;
 ---
-
-
-******************************************************************************
-
-[1]: https://en.wikipedia.org/wiki/Section_sign

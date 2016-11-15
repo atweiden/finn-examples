@@ -6,7 +6,7 @@ Hangman
 Introduction
 ------------
 
-This is a Hangman program written in Perl6. It lets you make guesses
+This is a Hangman program written in Perl6 [1]. It lets you make guesses
 about which letters are in an unknown word. On the eighth incorrect
 guess you lose.
 
@@ -66,7 +66,7 @@ Checking the User's Guess
 We loop through the secret word, checking if any of its letters were
 guessed. If they were, reveal that letter in the dashes array. If
 none of the letters in secret word were equal to the guess, then
-`$got-one-correct` will be false, and one guess will be added.
+`$got-one-correct` will be false, and one life will be deducted.
 
 --- Check input
 my Bool:D $got-one-correct = False;
@@ -158,3 +158,8 @@ wet wheel when where while whip whistle white who why wide will wind
 window wine wing winter wire wise with woman wood wool word
 work worm wound writing wrong year yellow yesterday young
 ---
+
+
+******************************************************************************
+
+[1]: https://github.com/zyedidia/Literate/blob/master/examples/hangman.lit

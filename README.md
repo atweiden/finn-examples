@@ -1,4 +1,4 @@
-# Finn
+# Finn Examples
 
 Literate programming with [Finn].
 
