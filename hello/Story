@@ -1,0 +1,40 @@
+/* vim: set filetype=finn foldmethod=marker foldlevel=0: */
+
+Hello World
+===========
+
+Introduction
+------------
+
+A simple, single-file hello world program written in Perl6.
+
+The following will (over)write the contents of `bin/hello` with the
+`Import modules` and `Print a string` code blocks:
+
+--- /bin/hello
+§ Import modules
+§ Print a string
+---
+
+First, we import any modules needed:
+
+--- Import modules
+use v6;
+---
+
+Forgot the module. Code blocks can be extended by defining them again:
+
+--- Import modules
+use Acme::Insult::Lala;
+---
+
+Then we print a string:
+
+--- Print a string
+say "hello, you " ~ Acme::Insult::Lala.new.generate-insult;
+---
+
+
+******************************************************************************
+
+[1]: https://en.wikipedia.org/wiki/Section_sign

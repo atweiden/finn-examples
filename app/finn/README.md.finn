@@ -1,0 +1,53 @@
+/* vim: set filetype=finn foldmethod=marker foldlevel=0: */
+
+Building the Project's README File
+----------------------------------
+
+`README.md` will be structured like this:
+
+--- /README.md
+§ Header section
+§ Synopsis section
+§ Installation section
+§ Licensing section
+---
+
+First, we create the header section:
+
+--- Header section
+# App
+
+Example app written in Perl6.
+---
+
+Moving on, we create the project synopsis to explain how to use the
+application / library.
+
+--- Synopsis section
+## Synopsis
+
+```perl6
+use App;
+App.exec;
+```
+---
+
+On to the installation section:
+
+--- Installation section
+## Installation
+
+### Dependencies
+
+- Rakudo Perl6
+- [Config::TOML](https://github.com/atweiden/config-toml)
+---
+
+Finally, the licensing section:
+
+--- Licensing section
+## Licensing
+
+This is free and unencumbered public domain software. For more
+information, see http://unlicense.org/ or the accompanying UNLICENSE file.
+---

@@ -1,0 +1,36 @@
+/* vim: set filetype=finn foldmethod=marker foldlevel=0: */
+
+lib/App.pm
+----------
+
+Now we're ready to build the application.
+
+§ /finn/lib/App/Utils.pm.finn
+
+Now onto the main application, which will look as follows:
+
+--- /lib/App.pm
+§ Import modules
+§ Define class unit
+
+§ Create class methods
+
+§ vimfmt
+---
+
+--- Import modules
+use v6;
+use App::Utils;
+---
+
+--- Define class unit
+unit class App;
+---
+
+--- Create class methods
+method exec() returns Str:D { App::Utils.hello }
+---
+
+--- vimfmt
+# vim: set filetype=perl6 foldmethod=marker foldlevel=0:
+---

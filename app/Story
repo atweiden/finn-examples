@@ -1,0 +1,27 @@
+/* vim: set filetype=finn foldmethod=marker foldlevel=0: */
+
+Your App or Library Name Goes Here
+==================================
+
+Introduction
+------------
+
+The `Story` file is the self-contained story of the software being
+assembled by Finn. All content must be assembled from this file.
+
+We'll begin by constructing the project's readme and licensing files,
+then move on to constructing the app's library.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+§ /finn/README.md.finn
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+§ /finn/UNLICENSE.finn
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+§ /finn/lib/App.pm.finn
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,18 @@
+/* vim: set filetype=finn foldmethod=marker foldlevel=0: */
+
+**lib/App/Utils.pm**
+
+First we need some utility functions.
+
+We start by defining the `App::Utils` class unit file:
+
+--- /lib/App/Utils.pm
+use v6;
+unit class App::Utils;
+---
+
+We append the utility function to the class:
+
+--- /lib/App/Utils.pm
+method hello() returns Str:D { 'Hello, World!' }
+---
