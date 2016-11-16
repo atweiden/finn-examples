@@ -40,7 +40,7 @@ my Str:D $secret-word = @words.pick;
 
 Next we initialize the variable to hold the dashes.
 
---- Setup
+--- Setup +=
 my Str:D @dashes = ('-' x $secret-word.chars).comb;
 ---
 

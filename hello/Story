@@ -24,7 +24,7 @@ use v6;
 
 Forgot the module. Code blocks can be extended by defining them again:
 
---- Import modules
+--- Import modules +=
 use Acme::Insult::Lala;
 ---
 
