@@ -1,0 +1,174 @@
+/* vim: set filetype=finn foldmethod=marker foldlevel=0: */
+
+Hard Example
+============
+this should be parsed as a `paragraph` since no `blank-line`,
+`comment-line` or `horizontal-rule` precedes it, and a line follows it
+
+this should be parsed as a `header3`
+
+this should also be parsed as a `header3` /* eol comment */
+
+this should be a paragraph since it ends in a comma (`,`),
+
+this should also be a paragraph since it ends in a comma (`,`), /* eol comment */
+
+this should be a paragraph since it ends in a period (`.`).
+
+this should also be a paragraph since it ends in a period (`.`). /* eol comment */
+
+this too should be a paragraph since it ends in a period (`.`). /*
+comment-text                                                     *
+comment-text                                                     *
+comment-text                                                     *
+comment-text                                                     *
+comment-text                                                     */
+
+/* lists
+ * {{{
+ */
+
+[9] (header3 with trailing whitespace)                 
+- nine
+  ! nine
+    o nine
+      <- nine
+        -> nine
+          = nine
+            => nine
+              <= nine
+                @ nine
+                  $ nine
+                    : nine
+
+[0] (header2)
+--------------------
+- zero
+  # zero
+    * zero
+      x zero
+        + zero
+          ! zero
+            ~ zero
+              > zero
+                - zero /* eol comment */
+                  - z /* inner word comment */ ero
+                    - /* leading comment */ zero
+
+[909] (header1)
+============================
+- nine zero nine
+  /* comment */
+  - nine zero nine
+    /*
+     * comment
+     * comment
+     * comment
+     */
+    - nine zero nine /*
+      comment         *
+      comment         *
+      comment         */
+      - nine zero 「nine」
+        - nine zero «nine»
+          - nine zero ⟅nine⟆
+            - nine zero ᚛nine᚜
+              - nine zero _nine_
+                - **nine** zero |nine|
+                  - nine *zero* {nine}
+                    - nine zero ~nine~
+
+/*
+ * }}}
+ end lists */
+
+/**/ this should be parsed as a paragraph
+
+Header2
+-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Another Header2
+-
+This is a paragraph since it is not preceded by a `blank-line`,
+`comment-block` or `horizontal-rule`. We just saw a `header2`.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+this should be parsed as a `header3` since a `horizontal-rule-soft` precedes it
+
+**another header3 since a `blank-line` precedes it**
+
+******************************************************************************
+this should be parsed as a `header3` since a `horizontal-rule-hard` precedes it
+******************************************************************************
+this should not be a `header3` since one line of text comes after it
+{{{one line of text goes here}}}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+this should not be a `header3` since one line of text comes after it
+one line of text goes here
+
+this should be a `header3`
+x because a `blank-line` comes before it
+[*] because a list comes after it
+1. the list continues \ / _$@$#%$^%Y&&^%%@$$#$T%Y^U&^' ' ~with~ *offset*
+   **gibberish** underlined up to here_. file://~/tmp/ /a\/b.txt
+   {} [] some symbols come on the next offset line
+  2. indented list-item
+    ```perl6
+    # indented perl6 code-block
+    my Str:D $greeting = 'Hello';
+    ```
+    /* ------------- *
+     * comment-block *
+     * comment-block *
+     * comment-block *
+     * ------------- */
+    -> here comes another code-block /* eol comment goes here */
+      --perl6
+      # indented perl6 code-block
+      my Str:D $greeting = 'Hello';
+      --
+--- The Simpsons Quotes
+'Doh!
+---
+``` The Simpsons Quotes +=
+Dental Plan!
+```
+-- The Simpsons Quotes +=
+Lisa needs braces!
+-------------------------------
+-- The Simpsons Quotes +=
+Bart! Why you little
+--
+
+~~
+this should be a `header3`
+[o] because a `horizontal-rule` comes before it
+[o] because a list comes after it
+
+**
+this should be a `header3`
+[=] because a `horizontal-rule` comes before it
+[=] because a list comes after it
+
+      INFO Robot
+
+                   FIXME
+                    ```
+                    \_/
+                    |:|
+                    -|-
+                    / \
+                    ```
+
+      DEBUG System
+
+
+
+******************************************************************************
+
+[1]: https://[2[3[4]]].finn
+[9]: /\\/\/\/\/\/\/\/\/\/\/\/\/\\/
+[0]: 1234567890-=`1234567890`
+[909]: a
