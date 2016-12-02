@@ -1,0 +1,25 @@
+Title of Section 1
+==================
+
+Introducing Section 1
+---------------------
+
+Begin Section 1 [1]
+
+This is Section 1.
+
+- 2016-12-01 20:07:00 DEBUG message / true, Section 1 **rocks** ~doesn't~ _it_?
+
+End Section 1
+
+- 2016-12-01 20:08:00 DEBUG message / false, Section 1 *rules*.
+
+That was Section 1.
+
+[x] Got to Section 1.
+[x] Finished Section 1.
+
+
+******************************************************************************
+
+[1]: https://github.com/atweiden/finn-examples

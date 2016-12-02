@@ -1,0 +1,25 @@
+Title of Section 2
+==================
+
+Introducing Section 2
+---------------------
+
+Begin Section 2 [1]
+
+This is Section 2.
+
+```perl6
+my Str:D $favorite-programming-language = 'Perl6';
+```
+
+End Section 2
+
+That was Section 2.
+
+[x] Got to Section 2.
+[x] Finished Section 2.
+
+
+******************************************************************************
+
+[1]: https://github.com/atweiden/finn-examples
