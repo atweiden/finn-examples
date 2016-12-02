@@ -12,8 +12,8 @@ The following will (over)write the contents of `bin/hello` with the
 `Import modules` and `Print a string` code blocks:
 
 --- /bin/hello
-§ Import modules
-§ Print a string
+§ "Import modules"
+§ "Print a string"
 ---
 
 First, we import any modules needed:

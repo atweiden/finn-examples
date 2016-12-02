@@ -6,10 +6,10 @@ Building the Project's README File
 `README.md` will be structured like this:
 
 --- /README.md
-§ Header section
-§ Synopsis section
-§ Installation section
-§ Licensing section
+§ "Header section"
+§ "Synopsis section"
+§ "Installation section"
+§ "Licensing section"
 ---
 
 First, we create the header section:

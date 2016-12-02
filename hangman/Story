@@ -14,16 +14,16 @@ The structure of the hangman program will look like this:
 
 --- /hangman.pl6
 'Welcome to hangman!'.say;
-§ Setup
+§ "Setup"
 my UInt:D $lives-left = 8;
 while $lives-left > 0
 {
-    § User input
-    § Check input
-    § Check win
+    § "User input"
+    § "Check input"
+    § "Check win"
 }
 
-§ End
+§ "End"
 ---
 
 
@@ -52,7 +52,7 @@ Now we can start the game. We ask for the user's guess and store it in
 the `$guess` variable.
 
 --- User input
-§ print dashes array
+§ "print dashes array"
 "You have $lives-left lives left".say;
 "What's your guess? ".print;
 my Str:D $guess = $*IN.get;
