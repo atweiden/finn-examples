@@ -10,12 +10,12 @@ Now we're ready to build the application.
 Now onto the main application, which will look as follows:
 
 --- /lib/App.pm
-§ Import modules
-§ Define class unit
+§ "Import modules"
+§ "Define class unit"
 
-§ Create class methods
+§ "Create class methods"
 
-§ vimfmt
+§ "vimfmt"
 ---
 
 --- Import modules
