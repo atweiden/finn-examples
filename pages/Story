@@ -5,12 +5,12 @@ A Story With Pages
 
 works like vimdoc hot-links. for quick jumping in vim
 
-1. |'Use this' /page/001|
-2. |'to link to different pages.' /page/002|
-3. |"It's better this way" /page/003|
-4. |"if you want to weave in reference material" /page/004|
+1. |Use this /page/001|
+2. |to link to different pages. /page/002|
+3. |It's better this way /page/003|
+4. |if you want to weave in reference material /page/004|
 5. |/page/005|
-6. |"Artillery"|
+6. |Artillery|
 
 ``` Artillery
          [%%%]
