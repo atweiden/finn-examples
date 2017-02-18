@@ -112,3 +112,37 @@ the following is not a Reference Block
 ******************************************************************************
 [79]: ending with a reference block followed by a long paragraph of dashes
 --------------------------------------------------------------------------
+[88]: you
+  can
+    wrap
+      text
+        around
+          like
+            list-item-unordered
+              all
+                contained
+                  within
+                    reference-line
+/*
+ * but it ends at blank-line, comment-block, code-block, reference-line,
+ * sectional-block, horizontal-rule, list-item
+ */
+
+[989]: attached at
+the hip (part of the above reference-line as are the dashes below this)
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+a header1 to end all header1s
+=============================
+=============================
+=============================
+
+a header2 to end all header2s
+-----------------------------
+-----------------------------
+-----------------------------
+a paragraph to end all paragraphs
+
+a header3 to end all header3s
