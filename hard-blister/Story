@@ -59,8 +59,7 @@ y
    * multi line comment after end of list-item line of text extends
    * list-item downward
    */
-this is a paragraph line, not a header, since the list-item comes directly
-above it
+this is a paragraph line, not a header, since a list-item comes above it
 ----
 
 the four dashes above were part of the same paragraph as `above it`.
