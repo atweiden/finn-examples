@@ -1,5 +1,47 @@
 /* vim: set filetype=finn foldmethod=marker foldlevel=0: */
 
+/*
+ * Table of Contents
+ * -----------------
+ *
+ * list block:
+ *
+ *     1.
+ *     x
+ *     =
+ *
+ * list-item-ordered:
+ *
+ *     2.
+ *
+ * paragraph:
+ *
+ *     y
+ *
+ * - header-block must come after blank-line, comment-block, horizontal-rule
+ *   - so the Str `"y\n-"` could not become a Header[2]
+ *     - the `y` comes after `"2.\n"` (list-item-ordered)
+ *
+ * list-block:
+ *
+ * - `y` above was interpreted as a paragraph
+ *   - list-block list-items are allowed to follow a paragraph
+ *
+ *    -
+ *    3.
+ *    -
+ *    4.
+ *
+ * header-block (Header[1]):
+ *
+ *
+ *    5.
+ *    =
+ *
+ * - blank line above `5.` is intentional
+ *
+ */
+
 1.
 x
 =
@@ -10,6 +52,62 @@ y
 -
 4.
 
-2.
-y
+5.
+=
+
+- /*
+   * multi line comment after end of list-item line of text extends
+   * list-item downward
+   */
+this is a paragraph line, not a header, since the list-item comes directly
+above it
 ----
+
+the four dashes above were part of the same paragraph as `above it`.
+******************************************************************************
+/*
+ * ***********************
+ * * stackoverflow links *
+ * ***********************
+ */
+[0]: http://stackoverflow.com
+[1]: http://stackoverflow.com
+[2]: http://stackoverflow.com
+******************************************************************************
+
+the following Reference Lines should not be part of a paragraph:
+
+        [10]: https://twitter.com
+        [200]: https://www.facebook.com
+
+or
+or
+or
+
+        [12]: https://google.com
+        [21]: https://www.yahoo.com
+
+the following Reference Lines should not be part of a list:
+
+- 1234
+  - qwerty
+    - asdf
+      - zxcv
+        [102]: 01
+        [201]: 02
+        [111]: 22
+
+the following is not a Reference Block
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[61]: this is text on a Reference Line
+- list goes here
+  - qwerty
+    - asdf
+      - zxcv
+        - followed my more Reference Lines
+        [102]: 01
+        [201]: 02
+        [111]: 22
+******************************************************************************
+[79]: ending with a reference block
