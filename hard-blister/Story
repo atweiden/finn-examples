@@ -123,7 +123,7 @@ the following is a Reference Block containing Reference Inline numbered `61`.
         [201]: 02
         [111]: 22
 ******************************************************************************
-[79]: ends with a Reference Line Block followed by a long paragraph of dashes.
+[79]: ends with a Reference Line Block including a long line of dashes.
 ------------------------------------------------------------------------------
 
 [88]: you
