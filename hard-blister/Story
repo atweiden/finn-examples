@@ -4,41 +4,54 @@
  * Table of Contents
  * -----------------
  *
- * list block:
+ * List Block:
  *
  *     1.
  *     x
  *     =
  *
- * list-item-ordered:
+ * - `1.` starts a List Block with an ordered List Item
+ * - `x` is interpreted as a Bullet Point for an unordered List Item
+ * - `=` is interpreted as a Bullet Point for an unordered List Item
+ *
+ *
+ * List Item (ordered):
  *
  *     2.
  *
- * paragraph:
+ * - another ordered List Item
+ *
+ *
+ * Paragraph:
  *
  *     y
  *
- * - header-block must come after blank-line, comment-block, horizontal-rule
- *   - so the Str `"y\n-"` could not become a Header[2]
- *     - the `y` comes after `"2.\n"` (list-item-ordered)
+ * - Header Block must come after Blank Line, Comment Block, or
+ *   Horizontal Rule
+ *   - so the Str `"y\n-"` could not become a `Header[2]`
+ *     - the `y` comes after `"2.\n"` (an ordered List Item)
  *
- * list-block:
  *
- * - `y` above was interpreted as a paragraph
- *   - list-block list-items are allowed to follow a paragraph
+ * List Block:
+ *
+ * - `y` above was interpreted as a Paragraph
+ *   - List Items are allowed to follow a Paragraph
  *
  *    -
  *    3.
  *    -
  *    4.
  *
- * header-block (Header[1]):
+ *
+ * Header Block:
  *
  *
  *    5.
  *    =
  *
- * - blank line above `5.` is intentional
+ * - Header Blocks have precedence over List Items
+ *   - blank line above `5.` is part of `HeaderBlock['BlankLine']`
+ *   - `=` means the `5.` is a `Header[1]`
  *
  */
 
@@ -56,13 +69,13 @@ y
 =
 
 - /*
-   * multi line comment after end of list-item line of text extends
-   * list-item downward
+   * multi line comment after end of List Item line of text extends
+   * the List Item downward
    */
-this is a paragraph line, not a header, since a list-item comes above it
+this is a Paragraph line, not a Header, since a List Item comes above it
 ----
 
-the four dashes above were part of the same paragraph as `above it`.
+the four dashes above were part of the same Paragraph as the `above it` text.
 ******************************************************************************
 /*
  * ***********************
@@ -74,7 +87,7 @@ the four dashes above were part of the same paragraph as `above it`.
 [2]: http://stackoverflow.com
 ******************************************************************************
 
-the following Reference Lines should not be part of a paragraph:
+the following Reference Lines should not be part of a Paragraph:
 
         [10]: https://twitter.com
         [200]: https://www.facebook.com
@@ -86,7 +99,8 @@ or
         [12]: https://google.com
         [21]: https://www.yahoo.com
 
-the following Reference Lines should not be part of a list:
+the following Reference Inlines are not part of Reference Lines. They
+should be part of the unordered List Item containing the string `zxcv`:
 
 - 1234
   - qwerty
@@ -96,7 +110,7 @@ the following Reference Lines should not be part of a list:
         [201]: 02
         [111]: 22
 
-the following is not a Reference Block
+the following is a Reference Block containing Reference Inline numbered `61`.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [61]: this is text on a Reference Line
@@ -104,13 +118,14 @@ the following is not a Reference Block
   - qwerty
     - asdf
       - zxcv
-        - followed my more Reference Lines
+        - the below Reference Inlines are not part of Reference Lines
         [102]: 01
         [201]: 02
         [111]: 22
 ******************************************************************************
-[79]: ending with a reference block followed by a long paragraph of dashes
---------------------------------------------------------------------------
+[79]: ends with a Reference Line Block followed by a long paragraph of dashes.
+------------------------------------------------------------------------------
+
 [88]: you
   can
     wrap
