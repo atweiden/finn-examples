@@ -110,7 +110,8 @@ should be part of the unordered List Item containing the string `zxcv`:
         [201]: 02
         [111]: 22
 
-the following is a Reference Block containing Reference Inline numbered `61`.
+the following is a Reference Line Block containing Reference Inline
+numbered `61`.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [61]: this is text on a Reference Line
