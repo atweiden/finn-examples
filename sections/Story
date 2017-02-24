@@ -1,90 +1,15 @@
 /* vim: set filetype=finn foldmethod=marker foldlevel=0: */
 
-/*
- * -------------------------------------------------
- * start of base Document containing sections [0..n]
- * -------------------------------------------------
- */
-
-Welcome to *section 0*.
-
-[o] `HorizontalRule['Soft']` delimits one section from another.
-[o] sections increment from 0 in an array (`UInt:D @a`) with
-   `$depth-in-document-tree-hierarchy + 1` number of elements.
-
-easy
-
---- /t/data/sections/out
-line 1
----
-
-/*
- * ---------------------------------------------------------------------
- * the below requested Document at path `section/0/first/child` will
- * populate Chunks of section [0,0..n], and if those Chunks have an
- * include directive, they will populate Chunks of section [0,0..n,0..r]
- * ---------------------------------------------------------------------
- */
-§ section/0/first/child
-
-Still in *section 0*.
+¶ 0.finn
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Welcome to *section 1*.
-
-medium
-
---- /t/data/sections/out +=
-line 2
----
-
-/*
- * ---------------------------------------------------------------------
- * the below requested Document at path `section/1/first/child` will
- * populate Chunks of section [1,0..n], and if those Chunks have an
- * include directive, they will populate Chunks of section [1,0..n,0..r]
- * ---------------------------------------------------------------------
- */
-§ section/1/first/child
-§ section/1/second/child
-§ section/1/third/child
+¶ 1.finn
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Welcome to *section 2*.
-
-hard
-
-/*
- * --------------------------------------------------------------------
- * and here is why top level Text-mode SectionalInlines will need to be
- * resolved first before doing anything else when processing a Document
- * --------------------------------------------------------------------
- */
-¶ share/blurb
-
-Given the above *Text-mode* SectionalInline, /share/blurb was `IO.slurped`
-and its contents were directly embedded in this base level Document.
-
-[x] notice how /share/blurb defines the Sectional Block named `aisle two`
-
---- aisle two +=
-¶ share/starts-with-letter-z.txt
-§ '[one]' depth/charges.dat
-second time asking: what does this do to the parser?
-§ 'reusable' section/1/reusable
----
-
---- /t/data/sections/out +=
-line 3
----
+¶ 2.finn
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Document ends at *section 3*.
-
-Still in *section 3*.
---- /t/data/sections/out +=
-line 4
----
+¶ 3.finn

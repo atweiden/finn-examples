@@ -1,0 +1,27 @@
+Welcome to *section 2*.
+
+hard
+
+/*
+ * --------------------------------------------------------------------
+ * and here is why top level Text-mode SectionalInlines will need to be
+ * resolved first before doing anything else when processing a Document
+ * --------------------------------------------------------------------
+ */
+¶ share/blurb
+
+Given the above *Text-mode* SectionalInline, /share/blurb was `IO.slurped`
+and its contents were directly embedded in this base level Document.
+
+[x] notice how /share/blurb defines the Sectional Block named `aisle two`
+
+--- aisle two +=
+¶ share/starts-with-letter-z.txt
+§ '[one]' depth/charges.dat
+second time asking: what does this do to the parser?
+§ 'reusable' section/1/reusable
+---
+
+--- /t/data/sections/out +=
+line 3
+---

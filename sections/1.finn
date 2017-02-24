@@ -1,0 +1,18 @@
+Welcome to *section 1*.
+
+medium
+
+--- /t/data/sections/out +=
+line 2
+---
+
+/*
+ * ---------------------------------------------------------------------
+ * the below requested Document at path `section/1/first/child` will
+ * populate Chunks of section [1,0..n], and if those Chunks have an
+ * include directive, they will populate Chunks of section [1,0..n,0..r]
+ * ---------------------------------------------------------------------
+ */
+§ section/1/first/child
+§ section/1/second/child
+§ section/1/third/child

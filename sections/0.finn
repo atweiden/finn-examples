@@ -1,0 +1,28 @@
+/*
+ * -------------------------------------------------
+ * start of base Document containing sections [0..n]
+ * -------------------------------------------------
+ */
+
+Welcome to *section 0*.
+
+[o] `HorizontalRule['Soft']` delimits one section from another.
+[o] sections increment from 0 in an array (`UInt:D @a`) with
+   `$depth-in-document-tree-hierarchy + 1` number of elements.
+
+easy
+
+--- /t/data/sections/out
+line 1
+---
+
+/*
+ * ---------------------------------------------------------------------
+ * the below requested Document at path `section/0/first/child` will
+ * populate Chunks of section [0,0..n], and if those Chunks have an
+ * include directive, they will populate Chunks of section [0,0..n,0..r]
+ * ---------------------------------------------------------------------
+ */
+§ section/0/first/child
+
+Still in *section 0*.
