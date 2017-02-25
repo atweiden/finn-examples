@@ -3,19 +3,21 @@ Welcome to *section 2*.
 hard
 
 /*
- * --------------------------------------------------------------------
- * and here is why top level Text-mode SectionalInlines will need to be
- * resolved first before doing anything else when processing a Document
- * --------------------------------------------------------------------
+ * -----------------------------------------------------------
+ * and here is the file containing Sectional Block 'aisle two'
+ * -----------------------------------------------------------
  */
-¶ share/blurb
+§ share/blurb
 
-Given the above *Text-mode* SectionalInline, /share/blurb was `IO.slurped`
-and its contents were directly embedded in this base level Document.
+Given the above *Finn-mode* SectionalInline, /share/blurb was parsed
+and its Chunks transposed in this Document (`2.finn`) as children of
+the containing `SectionalInline['File']` (`§ share/blurb`).
 
-[x] notice how /share/blurb defines the Sectional Block named `aisle two`
+[x] notice how /share/blurb defines a Sectional Block named `aisle two*`
+[v] we use its exported `aisle two` Sectional Block below
 
---- aisle two +=
+--- aisle two
+§ 'aisle two' share/blurb
 ¶ share/starts-with-letter-z.txt
 § '[one]' depth/charges.dat
 second time asking: what does this do to the parser?
