@@ -4,7 +4,7 @@ blurb
 hello, from inside /share/blurb
 
 --- aisle two*
-the below SectionalInline's file path should *not* be relative to
+the below IncludeLine's file path should *not* be relative to
 `share/blurb`, whose contents have been slurped.
 
 ¶ share/starts-with-letter-a.txt
