@@ -7,8 +7,8 @@ hello, from inside /share/blurb
 the below IncludeLine's file path should *not* be relative to
 `share/blurb`, whose contents have been slurped.
 
-¶ share/starts-with-letter-a.txt
+¶ /share/starts-with-letter-a.txt
 § '[zero]' depth/charges.dat
 first time asking: what does this do to the parser?
-§ 'reusable' section/1/reusable
+§ 'reusable' /section/1/reusable
 ---
