@@ -4,10 +4,27 @@ blurb
 hello, from inside /share/blurb
 
 --- aisle two*
-the below IncludeLine's file path should *not* be relative to
-`share/blurb`, whose contents have been slurped.
+The relative file paths `starts-with-letter-a.txt` and `depth/charges.dat`
+in the Includes below should be built relative to
+`'/share/blurb'.IO.dirname` (which is /share) when this Sectional Block
+is requested with a `§` Include. These should be the files:
 
-¶ /share/starts-with-letter-a.txt
+- /share/starts-with-letter-a.txt
+- /share/depth/charges.dat
+
+The `§` Include handling recurses the Finn source Document directory
+tree while updating the current file path with the file path of the
+Document being processed. This file path update happens by instantiating
+Finn::Parser::Actions with a `$.file` attribute. `$.file` is later
+used to `IO.resolve` relative file paths to the proper absolute path
+on disk with
+
+    ($*file.IO.dirname ~ '/' ~ $include-request-file-path).IO.resolve
+
+This is how include directives are handled in class
+`TXN::Parser::Actions`.
+
+¶ starts-with-letter-a.txt
 § '[zero]' depth/charges.dat
 first time asking: what does this do to the parser?
 § 'reusable' /section/1/reusable
