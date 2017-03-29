@@ -14,5 +14,5 @@ unit class App::Utils;
 We append the utility function to the class:
 
 --- /lib/App/Utils.pm +=
-method hello() returns Str:D { 'Hello, World!' }
+method hello(--> Str:D) { 'Hello, World!' }
 ---

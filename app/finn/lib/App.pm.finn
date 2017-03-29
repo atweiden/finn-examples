@@ -28,7 +28,7 @@ unit class App;
 ---
 
 --- Create class methods
-method exec() returns Str:D { App::Utils.hello }
+method exec(--> Str:D) { App::Utils.hello }
 ---
 
 --- vimfmt
