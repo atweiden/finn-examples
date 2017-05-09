@@ -16,3 +16,23 @@ line 2
 § section/1/first/child
 § section/1/second/child
 § section/1/third/child
+
+--- alpha
+§ "bravo"
+---
+
+--- bravo
+§ "charlie"
+---
+
+--- charlie
+§ "delta"
+---
+
+--- delta
+§ "echo"
+---
+
+--- echo
+§ /share/echo
+---
